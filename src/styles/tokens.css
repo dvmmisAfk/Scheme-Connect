@@ -1,0 +1,24 @@
+/* Design tokens. Tailwind maps onto these; nothing else defines colour. */
+:root {
+  --paper: #F6F5F1;
+  --surface: #FFFFFF;
+  --line: #E2E0D8;
+  --ink: #1B2420;
+  --ink-2: #5C635E;
+  --green: #1E5E45;
+  --green-tint: #E6F0EA;
+  --amber: #9A6200;
+  --amber-tint: #FBF0D9;
+  --slate: #3E5C76;
+  --slate-tint: #E7EEF4;
+  --muted: #6B6F6A;
+  --danger: #B3261E;
+
+  --radius-control: 10px;
+  --radius-sheet: 14px;
+  --touch: 48px;
+  --column: 440px;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur: 160ms;
+}

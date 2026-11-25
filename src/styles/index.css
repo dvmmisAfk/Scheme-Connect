@@ -1,0 +1,89 @@
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/500.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-sans-devanagari/400.css';
+@import '@fontsource/ibm-plex-sans-devanagari/500.css';
+@import '@fontsource/ibm-plex-sans-devanagari/600.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+@import './tokens.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--paper);
+    font-family: "IBM Plex Sans", "IBM Plex Sans Devanagari", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+  }
+  :lang(hi) {
+    font-family: "IBM Plex Sans Devanagari", "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.65;
+  }
+  code, pre, kbd, samp { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+}
+
+@layer components {
+  /* The signature source line: thin rule, then a mono line. */
+  .source-line {
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-2);
+  }
+}
+
+/* Question transition: 160ms fade + 8px slide. */
+@keyframes q-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.q-enter { animation: q-in var(--dur) var(--ease-out) both; }
+.progress-fill { transition: width 320ms var(--ease-out); }
+
+.print-only { display: none; }
+
+/* Print: A4, ink only. Source line and printed date stay. */
+@media print {
+  @page { size: A4; margin: 16mm; }
+  :root {
+    --paper: #fff; --surface: #fff; --line: #999;
+    --ink: #000; --ink-2: #333;
+    --green: #000; --green-tint: #fff; --amber: #000; --amber-tint: #fff;
+    --slate: #000; --slate-tint: #fff; --muted: #333;
+  }
+  html, body { background: #fff; color: #000; font-size: 12pt; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  .print-break { break-before: page; }
+  a { color: #000; text-decoration: none; }
+  main { max-width: none !important; padding: 0 !important; }
+  input[type='checkbox'] { appearance: none; width: 14px; height: 14px; border: 1.5px solid #000; border-radius: 2px; }
+  input[type='checkbox']:checked { background: #000; }
+  details > summary { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q-enter { animation: none; }
+  .progress-fill { transition: none; }
+}

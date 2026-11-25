@@ -1,0 +1,1578 @@
+[
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pm-kisan",
+    "short": "PM-KISAN",
+    "name": {
+      "en": "PM Kisan Samman Nidhi",
+      "hi": "प्रधानमंत्री किसान सम्मान निधि"
+    },
+    "level": "central",
+    "state": null,
+    "category": "agriculture",
+    "need": "farming",
+    "rule": {
+      "all": [
+        {
+          "attr": "occupation",
+          "op": "eq",
+          "value": "farmer",
+          "label": {
+            "en": "You are a farmer",
+            "hi": "आप किसान हैं"
+          },
+          "fail_label": {
+            "en": "You are not a farmer",
+            "hi": "आप किसान नहीं हैं"
+          }
+        },
+        {
+          "attr": "owns_cultivable_land",
+          "op": "is_true",
+          "label": {
+            "en": "You own farm land",
+            "hi": "आपके नाम खेती की ज़मीन है"
+          },
+          "fail_label": {
+            "en": "You don't own farm land",
+            "hi": "आपके नाम खेती की ज़मीन नहीं है"
+          }
+        },
+        {
+          "attr": "income_tax_payer",
+          "op": "is_false",
+          "label": {
+            "en": "You don't pay income tax",
+            "hi": "आप इनकम टैक्स नहीं भरते"
+          },
+          "fail_label": {
+            "en": "You pay income tax",
+            "hi": "आप इनकम टैक्स भरते हैं"
+          }
+        },
+        {
+          "attr": "govt_employee",
+          "op": "is_false",
+          "label": {
+            "en": "You are not a government employee",
+            "hi": "आप सरकारी कर्मचारी नहीं हैं"
+          },
+          "fail_label": {
+            "en": "You are a government employee",
+            "hi": "आप सरकारी कर्मचारी हैं"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "₹6,000 a year, paid in three instalments of ₹2,000.",
+      "hi": "साल में ₹6,000, ₹2,000 की तीन किस्तों में।"
+    },
+    "value": 6000,
+    "how_to_apply": {
+      "en": "Apply at a CSC or on pmkisan.gov.in. eKYC is needed.",
+      "hi": "CSC पर या pmkisan.gov.in पर आवेदन करें। eKYC ज़रूरी है।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar (for eKYC)",
+          "hi": "आधार (eKYC के लिए)"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Land record (khasra / khatauni)",
+          "hi": "ज़मीन का रिकॉर्ड (खसरा / खतौनी)"
+        }
+      },
+      {
+        "text": {
+          "en": "Bank passbook, linked to Aadhaar",
+          "hi": "आधार से जुड़ी बैंक पासबुक"
+        }
+      },
+      {
+        "text": {
+          "en": "Mobile number",
+          "hi": "मोबाइल नंबर"
+        }
+      }
+    ],
+    "source_url": "https://pmkisan.gov.in",
+    "source_label": "pmkisan.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pmjjby",
+    "short": "PMJJBY",
+    "name": {
+      "en": "PM Jeevan Jyoti Bima Yojana",
+      "hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना"
+    },
+    "level": "central",
+    "state": null,
+    "category": "insurance",
+    "need": "insurance",
+    "rule": {
+      "all": [
+        {
+          "attr": "age",
+          "op": "between",
+          "value": [
+            18,
+            50
+          ],
+          "label": {
+            "en": "You are between 18 and 50 years old",
+            "hi": "आपकी उम्र 18 से 50 साल के बीच है"
+          },
+          "fail_label": {
+            "en": "This is for ages 18 to 50",
+            "hi": "यह 18 से 50 साल की उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "has_bank_account",
+          "op": "is_true",
+          "label": {
+            "en": "You have a bank account",
+            "hi": "आपका बैंक खाता है"
+          },
+          "fail_label": {
+            "en": "You don't have a bank account",
+            "hi": "आपका बैंक खाता नहीं है"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "₹2 lakh life cover for ₹436 a year, taken from your bank account.",
+      "hi": "₹436 सालाना में ₹2 लाख का जीवन बीमा, पैसा आपके बैंक खाते से कटता है।"
+    },
+    "value": 200000,
+    "how_to_apply": {
+      "en": "At your own bank, or on jansuraksha.gov.in.",
+      "hi": "अपने बैंक में, या jansuraksha.gov.in पर।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "Aadhaar (for bank KYC)",
+          "hi": "आधार (बैंक KYC के लिए)"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Nominee details",
+          "hi": "नॉमिनी की जानकारी"
+        }
+      }
+    ],
+    "source_url": "https://jansuraksha.gov.in",
+    "source_label": "jansuraksha.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pmsby",
+    "short": "PMSBY",
+    "name": {
+      "en": "PM Suraksha Bima Yojana",
+      "hi": "प्रधानमंत्री सुरक्षा बीमा योजना"
+    },
+    "level": "central",
+    "state": null,
+    "category": "insurance",
+    "need": "insurance",
+    "rule": {
+      "all": [
+        {
+          "attr": "age",
+          "op": "between",
+          "value": [
+            18,
+            70
+          ],
+          "label": {
+            "en": "You are between 18 and 70 years old",
+            "hi": "आपकी उम्र 18 से 70 साल के बीच है"
+          },
+          "fail_label": {
+            "en": "This is for ages 18 to 70",
+            "hi": "यह 18 से 70 साल की उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "has_bank_account",
+          "op": "is_true",
+          "label": {
+            "en": "You have a bank account",
+            "hi": "आपका बैंक खाता है"
+          },
+          "fail_label": {
+            "en": "You don't have a bank account",
+            "hi": "आपका बैंक खाता नहीं है"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "₹2 lakh accident cover (₹1 lakh for partial disability) for ₹20 a year.",
+      "hi": "₹20 सालाना में ₹2 लाख का दुर्घटना बीमा (आंशिक विकलांगता पर ₹1 लाख)।"
+    },
+    "value": 200000,
+    "how_to_apply": {
+      "en": "At your own bank.",
+      "hi": "अपने बैंक में।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "Aadhaar (for bank KYC)",
+          "hi": "आधार (बैंक KYC के लिए)"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Nominee details",
+          "hi": "नॉमिनी की जानकारी"
+        }
+      }
+    ],
+    "source_url": "https://jansuraksha.gov.in",
+    "source_label": "jansuraksha.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "apy",
+    "short": "APY",
+    "name": {
+      "en": "Atal Pension Yojana",
+      "hi": "अटल पेंशन योजना"
+    },
+    "level": "central",
+    "state": null,
+    "category": "pension",
+    "need": "pension",
+    "rule": {
+      "all": [
+        {
+          "attr": "age",
+          "op": "between",
+          "value": [
+            18,
+            40
+          ],
+          "label": {
+            "en": "You are between 18 and 40 years old",
+            "hi": "आपकी उम्र 18 से 40 साल के बीच है"
+          },
+          "fail_label": {
+            "en": "This is for ages 18 to 40",
+            "hi": "यह 18 से 40 साल की उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "has_bank_account",
+          "op": "is_true",
+          "label": {
+            "en": "You have a bank account",
+            "hi": "आपका बैंक खाता है"
+          },
+          "fail_label": {
+            "en": "You don't have a bank account",
+            "hi": "आपका बैंक खाता नहीं है"
+          }
+        },
+        {
+          "attr": "income_tax_payer",
+          "op": "is_false",
+          "label": {
+            "en": "You don't pay income tax",
+            "hi": "आप इनकम टैक्स नहीं भरते"
+          },
+          "fail_label": {
+            "en": "You pay income tax",
+            "hi": "आप इनकम टैक्स भरते हैं"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "A guaranteed pension of ₹1,000 to ₹5,000 a month from age 60, depending on what you pay in.",
+      "hi": "60 साल की उम्र से हर महीने ₹1,000 से ₹5,000 तक की पक्की पेंशन, आपके जमा किए पैसे के हिसाब से।"
+    },
+    "value": 12000,
+    "how_to_apply": {
+      "en": "At your own bank.",
+      "hi": "अपने बैंक में।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Savings bank account",
+          "hi": "बचत बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Mobile number",
+          "hi": "मोबाइल नंबर"
+        }
+      }
+    ],
+    "source_url": "https://jansuraksha.gov.in",
+    "source_label": "jansuraksha.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pm-sym",
+    "short": "PM-SYM",
+    "name": {
+      "en": "PM Shram Yogi Maan-dhan",
+      "hi": "प्रधानमंत्री श्रम योगी मान-धन"
+    },
+    "level": "central",
+    "state": null,
+    "category": "pension",
+    "need": "pension",
+    "rule": {
+      "all": [
+        {
+          "attr": "age",
+          "op": "between",
+          "value": [
+            18,
+            40
+          ],
+          "label": {
+            "en": "You are between 18 and 40 years old",
+            "hi": "आपकी उम्र 18 से 40 साल के बीच है"
+          },
+          "fail_label": {
+            "en": "This is for ages 18 to 40",
+            "hi": "यह 18 से 40 साल की उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "unorganised_worker",
+          "op": "is_true",
+          "label": {
+            "en": "You work without a fixed salaried job (unorganised sector)",
+            "hi": "आप असंगठित क्षेत्र में काम करते हैं (कोई पक्की नौकरी नहीं)"
+          },
+          "fail_label": {
+            "en": "Your work is not in the unorganised sector",
+            "hi": "आपका काम असंगठित क्षेत्र में नहीं आता"
+          }
+        },
+        {
+          "attr": "monthly_income",
+          "op": "lte",
+          "value": 15000,
+          "label": {
+            "en": "You earn ₹15,000 a month or less",
+            "hi": "आपकी महीने की कमाई ₹15,000 या उससे कम है"
+          },
+          "fail_label": {
+            "en": "You earn more than ₹15,000 a month",
+            "hi": "आपकी महीने की कमाई ₹15,000 से ज़्यादा है"
+          }
+        },
+        {
+          "attr": "epfo_esic_nps_member",
+          "op": "is_false",
+          "label": {
+            "en": "You are not in EPF, ESIC or NPS",
+            "hi": "आप EPF, ESIC या NPS में नहीं हैं"
+          },
+          "fail_label": {
+            "en": "You are already in EPF, ESIC or NPS",
+            "hi": "आप पहले से EPF, ESIC या NPS में हैं"
+          }
+        },
+        {
+          "attr": "income_tax_payer",
+          "op": "is_false",
+          "label": {
+            "en": "You don't pay income tax",
+            "hi": "आप इनकम टैक्स नहीं भरते"
+          },
+          "fail_label": {
+            "en": "You pay income tax",
+            "hi": "आप इनकम टैक्स भरते हैं"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "₹3,000 a month pension from age 60. The government matches what you pay in each month.",
+      "hi": "60 साल की उम्र से हर महीने ₹3,000 पेंशन। आप हर महीने जितना जमा करते हैं, उतना ही सरकार भी जमा करती है।"
+    },
+    "value": 36000,
+    "how_to_apply": {
+      "en": "At a CSC.",
+      "hi": "CSC पर।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Savings or Jan Dhan account with IFSC",
+          "hi": "IFSC के साथ बचत या जन धन खाता"
+        }
+      }
+    ],
+    "source_url": "https://maandhan.in",
+    "source_label": "maandhan.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": {
+      "en": "State top-up amount: Confirm at the CSC",
+      "hi": "राज्य का हिस्सा कितना है: CSC पर पक्का कर लें"
+    },
+    "id": "ignoaps",
+    "short": "IGNOAPS",
+    "name": {
+      "en": "Indira Gandhi National Old Age Pension",
+      "hi": "इंदिरा गांधी राष्ट्रीय वृद्धावस्था पेंशन"
+    },
+    "level": "central",
+    "state": null,
+    "category": "pension",
+    "need": "pension",
+    "rule": {
+      "all": [
+        {
+          "attr": "age",
+          "op": "gte",
+          "value": 60,
+          "label": {
+            "en": "You are 60 or older",
+            "hi": "आपकी उम्र 60 साल या उससे ज़्यादा है"
+          },
+          "fail_label": {
+            "en": "This is for people aged 60 and above",
+            "hi": "यह 60 साल या उससे ज़्यादा उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "bpl",
+          "op": "is_true",
+          "label": {
+            "en": "Your family is listed as BPL",
+            "hi": "आपका परिवार BPL (गरीबी रेखा से नीचे) सूची में है"
+          },
+          "fail_label": {
+            "en": "Your family is not listed as BPL",
+            "hi": "आपका परिवार BPL सूची में नहीं है"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "A monthly old-age pension. The central share is ₹200 a month (ages 60 to 79) or ₹500 a month (80 and above), and the state adds a top-up.",
+      "hi": "हर महीने बुढ़ापा पेंशन। केंद्र का हिस्सा ₹200 महीना (60 से 79 साल) या ₹500 महीना (80 साल और ऊपर) है, और राज्य इसमें अपनी तरफ़ से जोड़ता है।"
+    },
+    "value": 2400,
+    "how_to_apply": {
+      "en": "At your gram panchayat, or the urban local body in towns.",
+      "hi": "अपनी ग्राम पंचायत में, या शहर में नगर निकाय में।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Age proof",
+          "hi": "उम्र का प्रमाण"
+        }
+      },
+      {
+        "text": {
+          "en": "BPL proof",
+          "hi": "BPL का प्रमाण"
+        }
+      },
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Samagra ID (MP)",
+          "hi": "समग्र आईडी (MP)"
+        },
+        "kind": "samagra"
+      },
+      {
+        "text": {
+          "en": "Photo",
+          "hi": "फ़ोटो"
+        }
+      }
+    ],
+    "source_url": "https://nsap.nic.in",
+    "source_label": "nsap.nic.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pmuy",
+    "short": "PMUY",
+    "name": {
+      "en": "PM Ujjwala Yojana",
+      "hi": "प्रधानमंत्री उज्ज्वला योजना"
+    },
+    "level": "central",
+    "state": null,
+    "category": "household",
+    "need": null,
+    "rule": {
+      "all": [
+        {
+          "attr": "gender",
+          "op": "eq",
+          "value": "female",
+          "label": {
+            "en": "You are a woman",
+            "hi": "आप महिला हैं"
+          },
+          "fail_label": {
+            "en": "This is only for women",
+            "hi": "यह सिर्फ़ महिलाओं के लिए है"
+          }
+        },
+        {
+          "attr": "age",
+          "op": "gte",
+          "value": 18,
+          "label": {
+            "en": "You are 18 or older",
+            "hi": "आपकी उम्र 18 साल या उससे ज़्यादा है"
+          },
+          "fail_label": {
+            "en": "This is for people aged 18 and above",
+            "hi": "यह 18 साल या उससे ज़्यादा उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "bpl",
+          "op": "is_true",
+          "label": {
+            "en": "Your family is listed as BPL",
+            "hi": "आपका परिवार BPL (गरीबी रेखा से नीचे) सूची में है"
+          },
+          "fail_label": {
+            "en": "Your family is not listed as BPL",
+            "hi": "आपका परिवार BPL सूची में नहीं है"
+          }
+        },
+        {
+          "attr": "has_lpg_connection",
+          "op": "is_false",
+          "label": {
+            "en": "Your home has no LPG connection",
+            "hi": "आपके घर में LPG कनेक्शन नहीं है"
+          },
+          "fail_label": {
+            "en": "Your home already has an LPG connection",
+            "hi": "आपके घर में पहले से LPG कनेक्शन है"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "A free LPG connection with a stove and the first refill, and a subsidy on refills.",
+      "hi": "मुफ़्त LPG कनेक्शन, चूल्हा और पहला सिलेंडर, और आगे के सिलेंडर पर सब्सिडी।"
+    },
+    "value": null,
+    "how_to_apply": {
+      "en": "At your nearest LPG distributor, or on pmuy.gov.in.",
+      "hi": "अपने नज़दीकी LPG वितरक के पास, या pmuy.gov.in पर।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar of the applicant and family members",
+          "hi": "आवेदक और परिवार के सदस्यों का आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Ration card",
+          "hi": "राशन कार्ड"
+        }
+      },
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      }
+    ],
+    "source_url": "https://pmuy.gov.in",
+    "source_label": "pmuy.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "ssy",
+    "short": "SSY",
+    "name": {
+      "en": "Sukanya Samriddhi Yojana",
+      "hi": "सुकन्या समृद्धि योजना"
+    },
+    "level": "central",
+    "state": null,
+    "category": "savings",
+    "need": null,
+    "rule": {
+      "attr": "has_girl_child_under_10",
+      "op": "is_true",
+      "label": {
+        "en": "You have a daughter under 10",
+        "hi": "आपकी 10 साल से छोटी बेटी है"
+      },
+      "fail_label": {
+        "en": "You don't have a daughter under 10",
+        "hi": "आपकी 10 साल से छोटी बेटी नहीं है"
+      }
+    },
+    "benefit": {
+      "en": "A savings account for your daughter, with a high interest rate set by the government (revised every quarter) and a tax benefit. You can deposit ₹250 to ₹1.5 lakh a year.",
+      "hi": "बेटी के लिए बचत खाता, जिस पर सरकार ऊँचा ब्याज देती है (हर तीन महीने में तय होता है) और टैक्स में छूट मिलती है। साल में ₹250 से ₹1.5 लाख तक जमा कर सकते हैं।"
+    },
+    "value": null,
+    "how_to_apply": {
+      "en": "At a post office or bank.",
+      "hi": "डाकघर या बैंक में।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Daughter's birth certificate",
+          "hi": "बेटी का जन्म प्रमाण पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Parent's ID and address proof",
+          "hi": "माता-पिता का पहचान और पते का प्रमाण"
+        }
+      },
+      {
+        "text": {
+          "en": "Photos",
+          "hi": "फ़ोटो"
+        }
+      }
+    ],
+    "source_url": "https://www.nsiindia.gov.in",
+    "source_label": "India Post / NSI",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pm-jay",
+    "short": "PM-JAY",
+    "name": {
+      "en": "Ayushman Bharat PM-JAY",
+      "hi": "आयुष्मान भारत PM-JAY"
+    },
+    "level": "central",
+    "state": null,
+    "category": "health",
+    "need": "health",
+    "rule": {
+      "any": [
+        {
+          "attr": "age",
+          "op": "gte",
+          "value": 70,
+          "label": {
+            "en": "You are 70 or older",
+            "hi": "आपकी उम्र 70 साल या उससे ज़्यादा है"
+          },
+          "fail_label": {
+            "en": "You are under 70",
+            "hi": "आपकी उम्र 70 साल से कम है"
+          }
+        },
+        {
+          "attr": "secc_listed",
+          "op": "is_true",
+          "label": {
+            "en": "Your family is on the SECC list",
+            "hi": "आपका परिवार SECC सूची में है"
+          },
+          "fail_label": {
+            "en": "Your family is not on the SECC list",
+            "hi": "आपका परिवार SECC सूची में नहीं है"
+          }
+        },
+        {
+          "all": [
+            {
+              "attr": "state",
+              "op": "eq",
+              "value": "MP",
+              "label": {
+                "en": "You live in Madhya Pradesh",
+                "hi": "आप मध्य प्रदेश में रहते हैं"
+              },
+              "fail_label": {
+                "en": "This is only for Madhya Pradesh",
+                "hi": "यह सिर्फ़ मध्य प्रदेश के लिए है"
+              }
+            },
+            {
+              "attr": "ration_card",
+              "op": "in",
+              "value": [
+                "AAY",
+                "PHH"
+              ],
+              "label": {
+                "en": "You have an AAY or PHH ration card",
+                "hi": "आपके पास AAY या PHH राशन कार्ड है"
+              },
+              "fail_label": {
+                "en": "You don't have an AAY or PHH ration card",
+                "hi": "आपके पास AAY या PHH राशन कार्ड नहीं है"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "benefit": {
+      "en": "Hospital treatment cover of up to ₹5 lakh per family per year.",
+      "hi": "हर परिवार को साल में ₹5 लाख तक का अस्पताल इलाज मुफ़्त।"
+    },
+    "value": 500000,
+    "how_to_apply": {
+      "en": "Check your name at beneficiary.nha.gov.in. Get your Ayushman card at a CSC or an empanelled hospital.",
+      "hi": "beneficiary.nha.gov.in पर अपना नाम देखें। आयुष्मान कार्ड CSC या सूचीबद्ध अस्पताल से बनवाएँ।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Ration card",
+          "hi": "राशन कार्ड"
+        }
+      }
+    ],
+    "source_url": "https://pmjay.gov.in",
+    "source_label": "pmjay.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pmay-g",
+    "short": "PMAY-G",
+    "name": {
+      "en": "PM Awas Yojana – Gramin",
+      "hi": "प्रधानमंत्री आवास योजना – ग्रामीण"
+    },
+    "level": "central",
+    "state": null,
+    "category": "housing",
+    "need": "housing",
+    "rule": {
+      "all": [
+        {
+          "attr": "area",
+          "op": "eq",
+          "value": "rural",
+          "label": {
+            "en": "You live in a village",
+            "hi": "आप गाँव में रहते हैं"
+          },
+          "fail_label": {
+            "en": "This is only for villages",
+            "hi": "यह सिर्फ़ गाँव के लिए है"
+          }
+        },
+        {
+          "attr": "house_type",
+          "op": "eq",
+          "value": "kutcha",
+          "label": {
+            "en": "Your house is kutcha",
+            "hi": "आपका घर कच्चा है"
+          },
+          "fail_label": {
+            "en": "Your house is already pucca",
+            "hi": "आपका घर पहले से पक्का है"
+          }
+        },
+        {
+          "attr": "income_tax_payer",
+          "op": "is_false",
+          "label": {
+            "en": "You don't pay income tax",
+            "hi": "आप इनकम टैक्स नहीं भरते"
+          },
+          "fail_label": {
+            "en": "You pay income tax",
+            "hi": "आप इनकम टैक्स भरते हैं"
+          }
+        },
+        {
+          "attr": "govt_employee",
+          "op": "is_false",
+          "label": {
+            "en": "You are not a government employee",
+            "hi": "आप सरकारी कर्मचारी नहीं हैं"
+          },
+          "fail_label": {
+            "en": "You are a government employee",
+            "hi": "आप सरकारी कर्मचारी हैं"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "₹1.20 lakh (in the plains) to build a pucca house.",
+      "hi": "पक्का घर बनाने के लिए ₹1.20 लाख (मैदानी इलाकों में)।"
+    },
+    "value": 120000,
+    "how_to_apply": {
+      "en": "Families are selected through the Awaas+ survey and the gram sabha.",
+      "hi": "परिवारों का चुनाव आवास+ सर्वे और ग्राम सभा से होता है।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "MGNREGA job card",
+          "hi": "मनरेगा जॉब कार्ड"
+        }
+      }
+    ],
+    "source_url": "https://pmayg.nic.in",
+    "source_label": "pmayg.nic.in",
+    "enrolment_status": "via_survey",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "pm-vishwakarma",
+    "short": "PM Vishwakarma",
+    "name": {
+      "en": "PM Vishwakarma",
+      "hi": "प्रधानमंत्री विश्वकर्मा"
+    },
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "need": null,
+    "rule": {
+      "all": [
+        {
+          "attr": "vishwakarma_trade",
+          "op": "neq",
+          "value": "none",
+          "label": {
+            "en": "Your work is one of the PM Vishwakarma trades",
+            "hi": "आपका काम PM विश्वकर्मा के कामों में से एक है"
+          },
+          "fail_label": {
+            "en": "Your work is not one of the PM Vishwakarma trades",
+            "hi": "आपका काम PM विश्वकर्मा के कामों में नहीं आता"
+          }
+        },
+        {
+          "attr": "age",
+          "op": "gte",
+          "value": 18,
+          "label": {
+            "en": "You are 18 or older",
+            "hi": "आपकी उम्र 18 साल या उससे ज़्यादा है"
+          },
+          "fail_label": {
+            "en": "This is for people aged 18 and above",
+            "hi": "यह 18 साल या उससे ज़्यादा उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "govt_employee",
+          "op": "is_false",
+          "label": {
+            "en": "You are not a government employee",
+            "hi": "आप सरकारी कर्मचारी नहीं हैं"
+          },
+          "fail_label": {
+            "en": "You are a government employee",
+            "hi": "आप सरकारी कर्मचारी हैं"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "Skill training with ₹500 a day while you train, a ₹15,000 toolkit voucher, and loans without collateral: ₹1 lakh, then ₹2 lakh, at 5% interest.",
+      "hi": "हुनर की ट्रेनिंग और ट्रेनिंग के दौरान ₹500 रोज़, ₹15,000 का औज़ार वाउचर, और बिना गारंटी का कर्ज़: पहले ₹1 लाख, फिर ₹2 लाख, 5% ब्याज पर।"
+    },
+    "value": 15000,
+    "how_to_apply": {
+      "en": "Register at a CSC. The gram panchayat or urban local body then verifies you.",
+      "hi": "CSC पर पंजीकरण कराएँ। उसके बाद ग्राम पंचायत या नगर निकाय जाँच करता है।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Mobile number",
+          "hi": "मोबाइल नंबर"
+        }
+      },
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "Ration card",
+          "hi": "राशन कार्ड"
+        }
+      }
+    ],
+    "source_url": "https://pmvishwakarma.gov.in",
+    "source_label": "pmvishwakarma.gov.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "post-matric-sc",
+    "short": "Post-matric (SC)",
+    "name": {
+      "en": "Post-matric Scholarship for SC students",
+      "hi": "अनुसूचित जाति के विद्यार्थियों के लिए पोस्ट-मैट्रिक छात्रवृत्ति"
+    },
+    "level": "central_state",
+    "state": null,
+    "category": "education",
+    "need": "education",
+    "rule": {
+      "all": [
+        {
+          "attr": "caste_category",
+          "op": "eq",
+          "value": "SC",
+          "label": {
+            "en": "You belong to a Scheduled Caste (SC)",
+            "hi": "आप अनुसूचित जाति (SC) से हैं"
+          },
+          "fail_label": {
+            "en": "This is for Scheduled Caste (SC) students",
+            "hi": "यह अनुसूचित जाति (SC) के विद्यार्थियों के लिए है"
+          }
+        },
+        {
+          "attr": "enrolled_post_matric",
+          "op": "is_true",
+          "label": {
+            "en": "You are studying in class 11 or above",
+            "hi": "आप कक्षा 11 या उससे आगे पढ़ रहे हैं"
+          },
+          "fail_label": {
+            "en": "You are not studying in class 11 or above",
+            "hi": "आप कक्षा 11 या उससे आगे नहीं पढ़ रहे"
+          }
+        },
+        {
+          "attr": "annual_family_income",
+          "op": "lte",
+          "value": 250000,
+          "label": {
+            "en": "Your family earns ₹2.5 lakh a year or less",
+            "hi": "आपके परिवार की सालाना कमाई ₹2.5 लाख या उससे कम है"
+          },
+          "fail_label": {
+            "en": "Your family earns more than ₹2.5 lakh a year",
+            "hi": "आपके परिवार की सालाना कमाई ₹2.5 लाख से ज़्यादा है"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "Your tuition fees and a maintenance allowance, from class 11 onwards.",
+      "hi": "कक्षा 11 से आगे की पढ़ाई की फ़ीस और रहने-खाने का भत्ता।"
+    },
+    "value": null,
+    "how_to_apply": {
+      "en": "On the MP scholarship portal.",
+      "hi": "MP छात्रवृत्ति पोर्टल पर।"
+    },
+    "documents": [
+      {
+        "text": {
+          "en": "Caste certificate",
+          "hi": "जाति प्रमाण पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Income certificate",
+          "hi": "आय प्रमाण पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Previous marksheet",
+          "hi": "पिछली मार्कशीट"
+        }
+      },
+      {
+        "text": {
+          "en": "Fee receipt",
+          "hi": "फ़ीस की रसीद"
+        }
+      },
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      },
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      }
+    ],
+    "source_url": "https://scholarshipportal.mp.nic.in",
+    "source_label": "scholarshipportal.mp.nic.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "mmvy",
+    "short": "MMVY",
+    "name": {
+      "en": "Mukhyamantri Medhavi Vidyarthi Yojana",
+      "hi": "मुख्यमंत्री मेधावी विद्यार्थी योजना"
+    },
+    "level": "state",
+    "state": "MP",
+    "category": "education",
+    "need": "education",
+    "rule": {
+      "all": [
+        {
+          "attr": "state",
+          "op": "eq",
+          "value": "MP",
+          "label": {
+            "en": "You live in Madhya Pradesh",
+            "hi": "आप मध्य प्रदेश में रहते हैं"
+          },
+          "fail_label": {
+            "en": "This is only for Madhya Pradesh",
+            "hi": "यह सिर्फ़ मध्य प्रदेश के लिए है"
+          }
+        },
+        {
+          "attr": "admitted_higher_education",
+          "op": "is_true",
+          "label": {
+            "en": "You have got admission to college",
+            "hi": "आपका कॉलेज में दाखिला हो गया है"
+          },
+          "fail_label": {
+            "en": "You don't have a college admission yet",
+            "hi": "आपका कॉलेज में दाखिला अभी नहीं हुआ है"
+          }
+        },
+        {
+          "attr": "annual_family_income",
+          "op": "lt",
+          "value": 600000,
+          "label": {
+            "en": "Your family earns less than ₹6 lakh a year",
+            "hi": "आपके परिवार की सालाना कमाई ₹6 लाख से कम है"
+          },
+          "fail_label": {
+            "en": "Your family earns ₹6 lakh a year or more",
+            "hi": "आपके परिवार की सालाना कमाई ₹6 लाख या उससे ज़्यादा है"
+          }
+        },
+        {
+          "any": [
+            {
+              "all": [
+                {
+                  "attr": "class12_board",
+                  "op": "eq",
+                  "value": "MP",
+                  "label": {
+                    "en": "You passed class 12 from MP Board",
+                    "hi": "आपने 12वीं MP बोर्ड से पास की है"
+                  },
+                  "fail_label": {
+                    "en": "You did not pass class 12 from MP Board",
+                    "hi": "आपने 12वीं MP बोर्ड से पास नहीं की"
+                  }
+                },
+                {
+                  "attr": "class12_percent",
+                  "op": "gte",
+                  "value": 70,
+                  "label": {
+                    "en": "You scored 70% or more in class 12",
+                    "hi": "आपके 12वीं में 70% या ज़्यादा अंक हैं"
+                  },
+                  "fail_label": {
+                    "en": "You scored less than 70% in class 12",
+                    "hi": "आपके 12वीं में 70% से कम अंक हैं"
+                  }
+                }
+              ]
+            },
+            {
+              "all": [
+                {
+                  "attr": "class12_board",
+                  "op": "in",
+                  "value": [
+                    "CBSE",
+                    "ICSE"
+                  ],
+                  "label": {
+                    "en": "You passed class 12 from CBSE or ICSE",
+                    "hi": "आपने 12वीं CBSE या ICSE से पास की है"
+                  },
+                  "fail_label": {
+                    "en": "You did not pass class 12 from CBSE or ICSE",
+                    "hi": "आपने 12वीं CBSE या ICSE से पास नहीं की"
+                  }
+                },
+                {
+                  "attr": "class12_percent",
+                  "op": "gte",
+                  "value": 85,
+                  "label": {
+                    "en": "You scored 85% or more in class 12",
+                    "hi": "आपके 12वीं में 85% या ज़्यादा अंक हैं"
+                  },
+                  "fail_label": {
+                    "en": "You scored less than 85% in class 12",
+                    "hi": "आपके 12वीं में 85% से कम अंक हैं"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "benefit": {
+      "en": "The state pays your college tuition fees.",
+      "hi": "कॉलेज की फ़ीस राज्य सरकार भरती है।"
+    },
+    "value": null,
+    "how_to_apply": null,
+    "documents": [
+      {
+        "text": {
+          "en": "Class 12 marksheet",
+          "hi": "12वीं की मार्कशीट"
+        }
+      },
+      {
+        "text": {
+          "en": "Income certificate",
+          "hi": "आय प्रमाण पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Domicile certificate",
+          "hi": "मूल निवासी प्रमाण पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Admission letter",
+          "hi": "दाखिले का पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Samagra ID",
+          "hi": "समग्र आईडी"
+        },
+        "kind": "samagra"
+      }
+    ],
+    "source_url": "https://scholarshipportal.mp.nic.in",
+    "source_label": "scholarshipportal.mp.nic.in",
+    "enrolment_status": "open",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": null,
+    "id": "ladli-behna",
+    "short": "Ladli Behna",
+    "name": {
+      "en": "Mukhyamantri Ladli Behna Yojana",
+      "hi": "मुख्यमंत्री लाड़ली बहना योजना"
+    },
+    "level": "state",
+    "state": "MP",
+    "category": "money_monthly",
+    "need": "money_monthly",
+    "rule": {
+      "all": [
+        {
+          "attr": "state",
+          "op": "eq",
+          "value": "MP",
+          "label": {
+            "en": "You live in Madhya Pradesh",
+            "hi": "आप मध्य प्रदेश में रहते हैं"
+          },
+          "fail_label": {
+            "en": "This is only for Madhya Pradesh",
+            "hi": "यह सिर्फ़ मध्य प्रदेश के लिए है"
+          }
+        },
+        {
+          "attr": "gender",
+          "op": "eq",
+          "value": "female",
+          "label": {
+            "en": "You are a woman",
+            "hi": "आप महिला हैं"
+          },
+          "fail_label": {
+            "en": "This is only for women",
+            "hi": "यह सिर्फ़ महिलाओं के लिए है"
+          }
+        },
+        {
+          "attr": "age",
+          "op": "between",
+          "value": [
+            21,
+            60
+          ],
+          "label": {
+            "en": "You are between 21 and 60 years old",
+            "hi": "आपकी उम्र 21 से 60 साल के बीच है"
+          },
+          "fail_label": {
+            "en": "This is for ages 21 to 60",
+            "hi": "यह 21 से 60 साल की उम्र वालों के लिए है"
+          }
+        },
+        {
+          "attr": "marital",
+          "op": "in",
+          "value": [
+            "married",
+            "widowed",
+            "divorced",
+            "abandoned"
+          ],
+          "label": {
+            "en": "You are married, widowed, divorced or abandoned",
+            "hi": "आप विवाहित, विधवा, तलाकशुदा या परित्यक्ता हैं"
+          },
+          "fail_label": {
+            "en": "This is for women who are married, widowed, divorced or abandoned",
+            "hi": "यह विवाहित, विधवा, तलाकशुदा या परित्यक्ता महिलाओं के लिए है"
+          }
+        },
+        {
+          "attr": "annual_family_income",
+          "op": "lte",
+          "value": 250000,
+          "label": {
+            "en": "Your family earns ₹2.5 lakh a year or less",
+            "hi": "आपके परिवार की सालाना कमाई ₹2.5 लाख या उससे कम है"
+          },
+          "fail_label": {
+            "en": "Your family earns more than ₹2.5 lakh a year",
+            "hi": "आपके परिवार की सालाना कमाई ₹2.5 लाख से ज़्यादा है"
+          }
+        },
+        {
+          "attr": "income_tax_payer",
+          "op": "is_false",
+          "label": {
+            "en": "You don't pay income tax",
+            "hi": "आप इनकम टैक्स नहीं भरते"
+          },
+          "fail_label": {
+            "en": "You pay income tax",
+            "hi": "आप इनकम टैक्स भरते हैं"
+          }
+        },
+        {
+          "attr": "govt_employee",
+          "op": "is_false",
+          "label": {
+            "en": "You are not a government employee",
+            "hi": "आप सरकारी कर्मचारी नहीं हैं"
+          },
+          "fail_label": {
+            "en": "You are a government employee",
+            "hi": "आप सरकारी कर्मचारी हैं"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "₹1,500 a month, sent straight to your bank account.",
+      "hi": "हर महीने ₹1,500, सीधे आपके बैंक खाते में।"
+    },
+    "value": 18000,
+    "how_to_apply": null,
+    "documents": [
+      {
+        "text": {
+          "en": "Samagra ID with eKYC done",
+          "hi": "eKYC वाली समग्र आईडी"
+        },
+        "kind": "samagra"
+      },
+      {
+        "text": {
+          "en": "Bank account linked to Aadhaar and enabled for DBT",
+          "hi": "आधार से जुड़ा और DBT चालू बैंक खाता"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Photo",
+          "hi": "फ़ोटो"
+        }
+      }
+    ],
+    "source_url": "https://cmladlibahna.mp.gov.in",
+    "source_label": "cmladlibahna.mp.gov.in",
+    "enrolment_status": "closed",
+    "core_test": true
+  },
+  {
+    "ministry": null,
+    "last_verified": null,
+    "deadline": null,
+    "rule_version": "1.0",
+    "benefit_note": {
+      "en": "Confirm current amounts on the official portal",
+      "hi": "अभी की रकम आधिकारिक पोर्टल पर पक्की कर लें"
+    },
+    "id": "pm-svanidhi",
+    "short": "PM SVANidhi",
+    "name": {
+      "en": "PM SVANidhi",
+      "hi": "प्रधानमंत्री स्वनिधि"
+    },
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "need": null,
+    "rule": {
+      "all": [
+        {
+          "attr": "occupation",
+          "op": "eq",
+          "value": "street_vendor",
+          "label": {
+            "en": "You are a street vendor",
+            "hi": "आप रेहड़ी-पटरी पर सामान बेचते हैं"
+          },
+          "fail_label": {
+            "en": "You are not a street vendor",
+            "hi": "आप रेहड़ी-पटरी पर सामान नहीं बेचते"
+          }
+        },
+        {
+          "attr": "area",
+          "op": "eq",
+          "value": "urban",
+          "label": {
+            "en": "You live in a town or city",
+            "hi": "आप शहर या कस्बे में रहते हैं"
+          },
+          "fail_label": {
+            "en": "This is only for towns and cities",
+            "hi": "यह सिर्फ़ शहर और कस्बों के लिए है"
+          }
+        }
+      ]
+    },
+    "benefit": {
+      "en": "Working-capital loans without collateral, in rising amounts, with an interest subsidy and cashback on digital payments.",
+      "hi": "बिना गारंटी का कारोबार के लिए कर्ज़, जो हर बार बढ़ता है, साथ में ब्याज में छूट और डिजिटल भुगतान पर कैशबैक।"
+    },
+    "value": null,
+    "how_to_apply": null,
+    "documents": [
+      {
+        "text": {
+          "en": "Aadhaar",
+          "hi": "आधार"
+        },
+        "kind": "aadhaar"
+      },
+      {
+        "text": {
+          "en": "Vending certificate, or ID / letter of recommendation from the urban local body",
+          "hi": "वेंडिंग सर्टिफ़िकेट, या नगर निकाय से पहचान पत्र / सिफ़ारिश पत्र"
+        }
+      },
+      {
+        "text": {
+          "en": "Bank account",
+          "hi": "बैंक खाता"
+        }
+      }
+    ],
+    "source_url": "https://pmsvanidhi.mohua.gov.in",
+    "source_label": "pmsvanidhi.mohua.gov.in",
+    "enrolment_status": "open",
+    "core_test": false
+  }
+]

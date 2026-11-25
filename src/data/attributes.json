@@ -1,0 +1,1187 @@
+[
+  {
+    "id": "state",
+    "kind": "enum",
+    "seed": true,
+    "short": {
+      "en": "State",
+      "hi": "राज्य"
+    },
+    "question": {
+      "en": "Which state do you live in?",
+      "hi": "आप किस राज्य में रहते हैं?"
+    },
+    "options": [
+      {
+        "value": "MP",
+        "label": {
+          "en": "Madhya Pradesh",
+          "hi": "मध्य प्रदेश"
+        }
+      },
+      {
+        "value": "other",
+        "label": {
+          "en": "Another state",
+          "hi": "कोई और राज्य"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "age",
+    "kind": "number",
+    "seed": true,
+    "min": 0,
+    "max": 120,
+    "short": {
+      "en": "Age",
+      "hi": "उम्र"
+    },
+    "unit": {
+      "en": "years",
+      "hi": "साल"
+    },
+    "question": {
+      "en": "How old are you?",
+      "hi": "आपकी उम्र कितनी है?"
+    }
+  },
+  {
+    "id": "gender",
+    "kind": "enum",
+    "seed": true,
+    "short": {
+      "en": "Gender",
+      "hi": "लिंग"
+    },
+    "question": {
+      "en": "Are you a woman or a man?",
+      "hi": "आप महिला हैं या पुरुष?"
+    },
+    "options": [
+      {
+        "value": "female",
+        "label": {
+          "en": "Woman",
+          "hi": "महिला"
+        }
+      },
+      {
+        "value": "male",
+        "label": {
+          "en": "Man",
+          "hi": "पुरुष"
+        }
+      },
+      {
+        "value": "other",
+        "label": {
+          "en": "Other",
+          "hi": "अन्य"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "area",
+    "kind": "enum",
+    "seed": true,
+    "short": {
+      "en": "Village or town",
+      "hi": "गाँव या शहर"
+    },
+    "question": {
+      "en": "Do you live in a village or a town?",
+      "hi": "आप गाँव में रहते हैं या शहर में?"
+    },
+    "options": [
+      {
+        "value": "rural",
+        "label": {
+          "en": "Village",
+          "hi": "गाँव"
+        }
+      },
+      {
+        "value": "urban",
+        "label": {
+          "en": "Town or city",
+          "hi": "शहर या कस्बा"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "occupation",
+    "kind": "enum",
+    "short": {
+      "en": "Work",
+      "hi": "काम"
+    },
+    "question": {
+      "en": "What work do you mostly do?",
+      "hi": "आप ज़्यादातर क्या काम करते हैं?"
+    },
+    "options": [
+      {
+        "value": "farmer",
+        "label": {
+          "en": "Farming",
+          "hi": "खेती"
+        }
+      },
+      {
+        "value": "homemaker",
+        "label": {
+          "en": "Looking after the home",
+          "hi": "घर का काम"
+        }
+      },
+      {
+        "value": "street_vendor",
+        "label": {
+          "en": "Selling on the street",
+          "hi": "रेहड़ी-पटरी पर सामान बेचना"
+        }
+      },
+      {
+        "value": "artisan",
+        "label": {
+          "en": "Craft or trade work (carpenter, tailor, potter…)",
+          "hi": "कारीगरी (बढ़ई, दर्ज़ी, कुम्हार…)"
+        }
+      },
+      {
+        "value": "daily_wage",
+        "label": {
+          "en": "Daily wage work",
+          "hi": "दिहाड़ी मज़दूरी"
+        }
+      },
+      {
+        "value": "student",
+        "label": {
+          "en": "Studying",
+          "hi": "पढ़ाई"
+        }
+      },
+      {
+        "value": "govt_employee",
+        "label": {
+          "en": "Government job",
+          "hi": "सरकारी नौकरी"
+        }
+      },
+      {
+        "value": "private_salaried",
+        "label": {
+          "en": "Private job with a salary",
+          "hi": "प्राइवेट नौकरी (तनख्वाह वाली)"
+        }
+      },
+      {
+        "value": "retired",
+        "label": {
+          "en": "Retired",
+          "hi": "रिटायर"
+        }
+      },
+      {
+        "value": "other",
+        "label": {
+          "en": "Something else",
+          "hi": "कुछ और"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "unorganised_worker",
+    "kind": "bool",
+    "short": {
+      "en": "Unorganised work",
+      "hi": "असंगठित काम"
+    },
+    "ask_if": {
+      "attr": "occupation",
+      "op": "eq",
+      "value": "other"
+    },
+    "question": {
+      "en": "Is your work without a fixed salary, PF or ESIC?",
+      "hi": "क्या आपका काम बिना पक्की तनख्वाह, PF या ESIC के है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "vishwakarma_trade",
+    "kind": "enum",
+    "short": {
+      "en": "Trade",
+      "hi": "कारीगरी का काम"
+    },
+    "ask_if": {
+      "attr": "occupation",
+      "op": "eq",
+      "value": "artisan"
+    },
+    "question": {
+      "en": "Which of these is your trade?",
+      "hi": "इनमें से आपका काम कौन-सा है?"
+    },
+    "options": [
+      {
+        "value": "carpenter",
+        "label": {
+          "en": "Carpenter",
+          "hi": "बढ़ई"
+        }
+      },
+      {
+        "value": "boat_maker",
+        "label": {
+          "en": "Boat maker",
+          "hi": "नाव बनाने वाले"
+        }
+      },
+      {
+        "value": "armourer",
+        "label": {
+          "en": "Armourer",
+          "hi": "अस्त्र बनाने वाले"
+        }
+      },
+      {
+        "value": "blacksmith",
+        "label": {
+          "en": "Blacksmith",
+          "hi": "लोहार"
+        }
+      },
+      {
+        "value": "tool_maker",
+        "label": {
+          "en": "Hammer and tool kit maker",
+          "hi": "हथौड़ा और औज़ार बनाने वाले"
+        }
+      },
+      {
+        "value": "locksmith",
+        "label": {
+          "en": "Locksmith",
+          "hi": "ताला बनाने वाले"
+        }
+      },
+      {
+        "value": "goldsmith",
+        "label": {
+          "en": "Goldsmith",
+          "hi": "सुनार"
+        }
+      },
+      {
+        "value": "potter",
+        "label": {
+          "en": "Potter",
+          "hi": "कुम्हार"
+        }
+      },
+      {
+        "value": "sculptor",
+        "label": {
+          "en": "Sculptor, stone carver or stone breaker",
+          "hi": "मूर्तिकार, पत्थर तराशने या तोड़ने वाले"
+        }
+      },
+      {
+        "value": "cobbler",
+        "label": {
+          "en": "Cobbler or footwear maker",
+          "hi": "मोची या जूते बनाने वाले"
+        }
+      },
+      {
+        "value": "mason",
+        "label": {
+          "en": "Mason",
+          "hi": "राजमिस्त्री"
+        }
+      },
+      {
+        "value": "basket_maker",
+        "label": {
+          "en": "Basket, mat, broom or coir maker",
+          "hi": "टोकरी, चटाई, झाड़ू या नारियल रेशा बनाने वाले"
+        }
+      },
+      {
+        "value": "toy_maker",
+        "label": {
+          "en": "Traditional doll and toy maker",
+          "hi": "पारंपरिक गुड़िया और खिलौने बनाने वाले"
+        }
+      },
+      {
+        "value": "barber",
+        "label": {
+          "en": "Barber",
+          "hi": "नाई"
+        }
+      },
+      {
+        "value": "garland_maker",
+        "label": {
+          "en": "Garland maker",
+          "hi": "माला बनाने वाले"
+        }
+      },
+      {
+        "value": "washerman",
+        "label": {
+          "en": "Washerman",
+          "hi": "धोबी"
+        }
+      },
+      {
+        "value": "tailor",
+        "label": {
+          "en": "Tailor",
+          "hi": "दर्ज़ी"
+        }
+      },
+      {
+        "value": "fishing_net_maker",
+        "label": {
+          "en": "Fishing net maker",
+          "hi": "मछली का जाल बनाने वाले"
+        }
+      },
+      {
+        "value": "none",
+        "label": {
+          "en": "None of these",
+          "hi": "इनमें से कोई नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "govt_employee",
+    "kind": "bool",
+    "derived_only": true,
+    "short": {
+      "en": "Government job",
+      "hi": "सरकारी नौकरी"
+    },
+    "question": {
+      "en": "Do you have a government job?",
+      "hi": "क्या आपकी सरकारी नौकरी है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "marital",
+    "kind": "enum",
+    "short": {
+      "en": "Marital status",
+      "hi": "शादी"
+    },
+    "question": {
+      "en": "Are you married?",
+      "hi": "क्या आपकी शादी हुई है?"
+    },
+    "options": [
+      {
+        "value": "unmarried",
+        "label": {
+          "en": "Not married",
+          "hi": "शादी नहीं हुई"
+        }
+      },
+      {
+        "value": "married",
+        "label": {
+          "en": "Married",
+          "hi": "शादीशुदा"
+        }
+      },
+      {
+        "value": "widowed",
+        "label": {
+          "en": "Widowed",
+          "hi": "विधवा / विधुर"
+        }
+      },
+      {
+        "value": "divorced",
+        "label": {
+          "en": "Divorced",
+          "hi": "तलाकशुदा"
+        }
+      },
+      {
+        "value": "abandoned",
+        "label": {
+          "en": "Abandoned by spouse",
+          "hi": "पति/पत्नी ने छोड़ दिया"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "has_bank_account",
+    "kind": "bool",
+    "short": {
+      "en": "Bank account",
+      "hi": "बैंक खाता"
+    },
+    "question": {
+      "en": "Do you have a bank account?",
+      "hi": "क्या आपका बैंक खाता है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "income_tax_payer",
+    "kind": "bool",
+    "short": {
+      "en": "Income tax",
+      "hi": "इनकम टैक्स"
+    },
+    "question": {
+      "en": "Do you pay income tax?",
+      "hi": "क्या आप इनकम टैक्स भरते हैं?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "owns_cultivable_land",
+    "kind": "bool",
+    "short": {
+      "en": "Farm land",
+      "hi": "खेती की ज़मीन"
+    },
+    "question": {
+      "en": "Is there farm land in your name?",
+      "hi": "क्या आपके नाम पर खेती की ज़मीन है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "annual_family_income",
+    "kind": "bucket",
+    "short": {
+      "en": "Family income",
+      "hi": "परिवार की कमाई"
+    },
+    "question": {
+      "en": "How much does your whole family earn in a year?",
+      "hi": "आपका पूरा परिवार साल में कितना कमाता है?"
+    },
+    "help": {
+      "en": "A rough guess is fine.",
+      "hi": "अंदाज़े से बताएँ, चलेगा।"
+    },
+    "options": [
+      {
+        "value": 80000,
+        "label": {
+          "en": "Up to ₹1 lakh",
+          "hi": "₹1 लाख तक"
+        }
+      },
+      {
+        "value": 200000,
+        "label": {
+          "en": "₹1 lakh to ₹2.5 lakh",
+          "hi": "₹1 लाख से ₹2.5 लाख"
+        }
+      },
+      {
+        "value": 400000,
+        "label": {
+          "en": "₹2.5 lakh to ₹6 lakh",
+          "hi": "₹2.5 लाख से ₹6 लाख"
+        }
+      },
+      {
+        "value": 800000,
+        "label": {
+          "en": "More than ₹6 lakh",
+          "hi": "₹6 लाख से ज़्यादा"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "monthly_income",
+    "kind": "bucket",
+    "short": {
+      "en": "Your monthly income",
+      "hi": "आपकी महीने की कमाई"
+    },
+    "question": {
+      "en": "How much do you yourself earn in a month?",
+      "hi": "आप ख़ुद महीने में कितना कमाते हैं?"
+    },
+    "options": [
+      {
+        "value": 8000,
+        "label": {
+          "en": "Up to ₹10,000",
+          "hi": "₹10,000 तक"
+        }
+      },
+      {
+        "value": 13000,
+        "label": {
+          "en": "₹10,000 to ₹15,000",
+          "hi": "₹10,000 से ₹15,000"
+        }
+      },
+      {
+        "value": 20000,
+        "label": {
+          "en": "More than ₹15,000",
+          "hi": "₹15,000 से ज़्यादा"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "epfo_esic_nps_member",
+    "kind": "bool",
+    "short": {
+      "en": "EPF / ESIC / NPS",
+      "hi": "EPF / ESIC / NPS"
+    },
+    "question": {
+      "en": "Are you a member of EPF, ESIC or NPS?",
+      "hi": "क्या आप EPF, ESIC या NPS के सदस्य हैं?"
+    },
+    "help": {
+      "en": "These are usually deducted from a salary.",
+      "hi": "ये आमतौर पर तनख्वाह से कटते हैं।"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "bpl",
+    "kind": "bool",
+    "short": {
+      "en": "BPL list",
+      "hi": "BPL सूची"
+    },
+    "question": {
+      "en": "Is your family on the BPL (below poverty line) list?",
+      "hi": "क्या आपका परिवार BPL (गरीबी रेखा से नीचे) सूची में है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "has_lpg_connection",
+    "kind": "bool",
+    "short": {
+      "en": "LPG connection",
+      "hi": "LPG कनेक्शन"
+    },
+    "question": {
+      "en": "Does your home have an LPG gas connection?",
+      "hi": "क्या आपके घर में LPG गैस कनेक्शन है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "secc_listed",
+    "kind": "bool",
+    "short": {
+      "en": "SECC list",
+      "hi": "SECC सूची"
+    },
+    "question": {
+      "en": "Is your family on the SECC 2011 list?",
+      "hi": "क्या आपका परिवार SECC 2011 सूची में है?"
+    },
+    "help": {
+      "en": "The panchayat or CSC can tell you.",
+      "hi": "पंचायत या CSC से पता चल सकता है।"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ration_card",
+    "kind": "enum",
+    "short": {
+      "en": "Ration card",
+      "hi": "राशन कार्ड"
+    },
+    "question": {
+      "en": "What kind of ration card do you have?",
+      "hi": "आपके पास कौन-सा राशन कार्ड है?"
+    },
+    "options": [
+      {
+        "value": "AAY",
+        "label": {
+          "en": "Antyodaya (AAY)",
+          "hi": "अंत्योदय (AAY)"
+        }
+      },
+      {
+        "value": "PHH",
+        "label": {
+          "en": "Priority household (PHH)",
+          "hi": "प्राथमिकता परिवार (PHH)"
+        }
+      },
+      {
+        "value": "other",
+        "label": {
+          "en": "Another kind",
+          "hi": "कोई और"
+        }
+      },
+      {
+        "value": "none",
+        "label": {
+          "en": "No ration card",
+          "hi": "राशन कार्ड नहीं है"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "has_girl_child_under_10",
+    "kind": "bool",
+    "short": {
+      "en": "Daughter under 10",
+      "hi": "10 साल से छोटी बेटी"
+    },
+    "question": {
+      "en": "Do you have a daughter under 10 years old?",
+      "hi": "क्या आपकी 10 साल से छोटी बेटी है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "house_type",
+    "kind": "enum",
+    "short": {
+      "en": "House",
+      "hi": "घर"
+    },
+    "question": {
+      "en": "Is your house kutcha or pucca?",
+      "hi": "आपका घर कच्चा है या पक्का?"
+    },
+    "options": [
+      {
+        "value": "kutcha",
+        "label": {
+          "en": "Kutcha",
+          "hi": "कच्चा"
+        }
+      },
+      {
+        "value": "pucca",
+        "label": {
+          "en": "Pucca",
+          "hi": "पक्का"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "caste_category",
+    "kind": "enum",
+    "short": {
+      "en": "Category",
+      "hi": "वर्ग"
+    },
+    "question": {
+      "en": "Which category do you belong to?",
+      "hi": "आप किस वर्ग से हैं?"
+    },
+    "options": [
+      {
+        "value": "SC",
+        "label": {
+          "en": "SC",
+          "hi": "अनुसूचित जाति (SC)"
+        }
+      },
+      {
+        "value": "ST",
+        "label": {
+          "en": "ST",
+          "hi": "अनुसूचित जनजाति (ST)"
+        }
+      },
+      {
+        "value": "OBC",
+        "label": {
+          "en": "OBC",
+          "hi": "अन्य पिछड़ा वर्ग (OBC)"
+        }
+      },
+      {
+        "value": "General",
+        "label": {
+          "en": "General",
+          "hi": "सामान्य"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "Prefer not to say",
+          "hi": "नहीं बताना चाहते"
+        }
+      }
+    ]
+  },
+  {
+    "id": "enrolled_post_matric",
+    "kind": "bool",
+    "short": {
+      "en": "Studying class 11+",
+      "hi": "कक्षा 11 या आगे की पढ़ाई"
+    },
+    "question": {
+      "en": "Are you studying in class 11 or above right now?",
+      "hi": "क्या आप अभी कक्षा 11 या उससे आगे पढ़ रहे हैं?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "admitted_higher_education",
+    "kind": "bool",
+    "short": {
+      "en": "College admission",
+      "hi": "कॉलेज में दाखिला"
+    },
+    "question": {
+      "en": "Have you got admission to a college?",
+      "hi": "क्या आपका किसी कॉलेज में दाखिला हुआ है?"
+    },
+    "options": [
+      {
+        "value": true,
+        "label": {
+          "en": "Yes",
+          "hi": "हाँ"
+        }
+      },
+      {
+        "value": false,
+        "label": {
+          "en": "No",
+          "hi": "नहीं"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "class12_board",
+    "kind": "enum",
+    "short": {
+      "en": "Class 12 board",
+      "hi": "12वीं का बोर्ड"
+    },
+    "question": {
+      "en": "Which board did you pass class 12 from?",
+      "hi": "आपने 12वीं किस बोर्ड से पास की?"
+    },
+    "options": [
+      {
+        "value": "MP",
+        "label": {
+          "en": "MP Board",
+          "hi": "MP बोर्ड"
+        }
+      },
+      {
+        "value": "CBSE",
+        "label": {
+          "en": "CBSE",
+          "hi": "CBSE"
+        }
+      },
+      {
+        "value": "ICSE",
+        "label": {
+          "en": "ICSE",
+          "hi": "ICSE"
+        }
+      },
+      {
+        "value": "other",
+        "label": {
+          "en": "Another board",
+          "hi": "कोई और बोर्ड"
+        }
+      },
+      {
+        "value": null,
+        "label": {
+          "en": "I don't know",
+          "hi": "पता नहीं"
+        }
+      }
+    ]
+  },
+  {
+    "id": "class12_percent",
+    "kind": "number",
+    "min": 0,
+    "max": 100,
+    "short": {
+      "en": "Class 12 marks",
+      "hi": "12वीं के अंक"
+    },
+    "unit": {
+      "en": "%",
+      "hi": "%"
+    },
+    "question": {
+      "en": "What percentage did you get in class 12?",
+      "hi": "12वीं में आपके कितने प्रतिशत अंक आए?"
+    }
+  },
+  {
+    "id": "already_receiving",
+    "kind": "multi",
+    "short": {
+      "en": "Already receiving",
+      "hi": "पहले से मिल रही"
+    },
+    "question": {
+      "en": "Which of these do you already get?",
+      "hi": "इनमें से आपको कौन-सी पहले से मिल रही है?"
+    },
+    "help": {
+      "en": "Optional. Tick any you already get.",
+      "hi": "ज़रूरी नहीं। जो पहले से मिल रही हैं, उन पर निशान लगाएँ।"
+    }
+  }
+]
